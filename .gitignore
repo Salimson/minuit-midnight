@@ -1,0 +1,17 @@
+node_modules
+.next
+out
+.env*.local
+.DS_Store
+Thumbs.db
+*.log
+.vercel
+
+# Claude Code local state (session notes, permissions)
+.claude/
+
+# TypeScript build cache (régénéré automatiquement)
+tsconfig.tsbuildinfo
+
+# Netlify local cache
+.netlify/

@@ -1,0 +1,39 @@
+# ─────────────────────────────────────────────────────────────
+# netlify.toml — configuration Netlify pour Minuit Midnight
+#
+# Next.js 16 App Router déployé en mode Node runtime (SSR + routes API).
+# Netlify détecte automatiquement Next.js et applique @netlify/plugin-nextjs
+# — pas besoin d'installer le plugin manuellement.
+# ─────────────────────────────────────────────────────────────
+
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  # Aligne la version Node avec le projet local
+  NODE_VERSION = "22"
+  # Force Next à utiliser le mode prod optimisé
+  NEXT_TELEMETRY_DISABLED = "1"
+
+# ─── Headers de sécurité par défaut ──────────────────────────
+# Renforce la robustesse en production sans casser l'UX.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+# Cache long sur les assets statiques immuables (Next hash déjà les noms)
+[[headers]]
+  for = "/_next/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Cache moyen sur les images uploadées (motos, hero, logo)
+[[headers]]
+  for = "/motos/*"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000, must-revalidate"
