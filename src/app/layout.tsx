@@ -61,6 +61,10 @@ export const metadata: Metadata = {
     icon: '/logo.png',
     apple: '/logo.png',
   },
+  // Google Search Console — validation propriété
+  verification: {
+    google: 'm2JlsYbgFagY8ZqSxm71TSzt3_HNhJ_kR0cJf-tK6-A',
+  },
 }
 
 // Barre iOS/Android : ink (haut de page = hero warm), la barre s'accorde à
