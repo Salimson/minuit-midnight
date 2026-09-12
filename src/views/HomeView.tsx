@@ -6,12 +6,20 @@ import Reveal from '@/components/Reveal'
 import SplitReveal from '@/components/SplitReveal'
 import Counter from '@/components/Counter'
 import TiltCard from '@/components/TiltCard'
+import dynamic from 'next/dynamic'
 import PriceTag from '@/components/PriceTag'
 import HeroNightVeil from '@/components/HeroNightVeil'
-import PricingConfigurator from '@/components/PricingConfigurator'
-import GoogleReviews from '@/components/GoogleReviews'
 import RealFleetShowcase from '@/components/RealFleetShowcase'
 import { dict, pathFor, type Locale } from '@/lib/i18n'
+
+// Below-fold — hydratation différée, TTI plus rapide sur mobile
+const PricingConfigurator = dynamic(
+  () => import('@/components/PricingConfigurator'),
+  { loading: () => <div style={{ minHeight: 600 }} aria-hidden /> }
+)
+const GoogleReviews = dynamic(() => import('@/components/GoogleReviews'), {
+  loading: () => <div style={{ minHeight: 500 }} aria-hidden />,
+})
 
 export default function HomeView({ locale }: { locale: Locale }) {
   const t = dict[locale]

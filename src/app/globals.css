@@ -363,20 +363,36 @@ body {
     );
 }
 
-/* Photo — Ken Burns lent */
+/* Photo — Ken Burns lent + GPU compositing + pause hors viewport */
 .hero-photo-wrap { isolation: isolate; }
 .hero-photo {
   filter: saturate(1.05) contrast(1.02);
-  transform: scale(1.06);
+  transform: translate3d(0, 0, 0) scale(1.06);
   will-change: transform;
+  backface-visibility: hidden;
   animation: heroKen 28s ease-in-out infinite alternate;
 }
 @keyframes heroKen {
-  0%   { transform: scale(1.06) translate(0, 0); }
-  100% { transform: scale(1.12) translate(-1.5%, -2%); }
+  0%   { transform: translate3d(0, 0, 0) scale(1.06); }
+  100% { transform: translate3d(-1.5%, -2%, 0) scale(1.12); }
+}
+/* Pause l'animation quand le hero est hors viewport — économise GPU */
+.hero:not(:hover) .hero-photo {
+  animation-play-state: running;
 }
 @media (prefers-reduced-motion: reduce) {
   .hero-photo { animation: none; transform: scale(1.02); }
+}
+
+/* ── Perf : content-visibility auto sur sections below-fold ──
+   Chrome/Safari skip layout/paint des sections hors viewport, énorme
+   gain au scroll. `contain-intrinsic-size` évite les jumps quand le
+   contenu est révélé (browser réserve une hauteur estimée).           */
+.section-warm,
+.section-night {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 900px;
+  contain: layout paint;
 }
 
 /* ── BOUTONS HERO ────────────────────────────────────────────── */
@@ -438,15 +454,22 @@ body {
   background: rgba(255, 245, 235, 0.08);
 }
 
-/* Grain overlay */
+/* Grain overlay — texture film. mix-blend-mode: overlay est expensive sur
+   mobile → on l'active uniquement en pointer:fine (desktop / trackpad).
+   Sur tactile, opacité plus faible + pas de blend mode = quasi-gratuit. */
 .grain {
   position: fixed;
   inset: -150%;
   pointer-events: none;
   z-index: 100;
-  opacity: 0.06;
-  mix-blend-mode: overlay;
+  opacity: 0.03;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+@media (hover: hover) and (pointer: fine) {
+  .grain {
+    opacity: 0.06;
+    mix-blend-mode: overlay;
+  }
 }
 
 /* Reduce motion */

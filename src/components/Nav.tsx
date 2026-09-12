@@ -89,7 +89,10 @@ export default function Nav() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b transition-[opacity,transform,background-color,border-color] duration-500 ease-out ${
+      // backdrop-blur-sm sur mobile (moins cher), md sur desktop
+      // will-change transform force GPU compositing → 0 jank au show/hide
+      style={{ willChange: 'transform, opacity' }}
+      className={`fixed top-0 left-0 right-0 z-50 backdrop-blur-sm md:backdrop-blur-md border-b transition-[opacity,transform,background-color,border-color] duration-500 ease-out ${
         scrolled ? 'bg-ink/85 border-white/5' : 'bg-ink/60 border-cream/10'
       } ${
         hidden

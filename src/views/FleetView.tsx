@@ -5,8 +5,14 @@ import { whatsappLink } from '@/lib/config'
 import Reveal from '@/components/Reveal'
 import SplitReveal from '@/components/SplitReveal'
 import Counter from '@/components/Counter'
+import dynamic from 'next/dynamic'
 import { dict, pathFor, type Locale } from '@/lib/i18n'
-import PricingConfigurator from '@/components/PricingConfigurator'
+
+// Below-fold — hydratation différée
+const PricingConfigurator = dynamic(
+  () => import('@/components/PricingConfigurator'),
+  { loading: () => <div style={{ minHeight: 600 }} aria-hidden /> }
+)
 
 export default function FleetView({ locale }: { locale: Locale }) {
   const t = dict[locale]
