@@ -37,11 +37,26 @@ export default function ScooterCard({
       transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
     >
       <div className={`lg:col-span-7 relative ${isEven ? '' : 'lg:order-2'}`}>
+        {/* Ligne meta au-dessus de l'image sur mobile → n'écrase plus la moto.
+            Sur desktop (lg:), les badges reprennent leur position overlay. */}
+        <div className="flex items-center justify-between gap-3 mb-3 lg:mb-0 lg:hidden">
+          <div className="flex items-center gap-3">
+            <span className="editorial-num text-dust">{s.num}</span>
+            <span className="h-px w-6 bg-coral" />
+            <span className="tag text-coral">{s.brand}</span>
+          </div>
+          {onRequest && (
+            <span className="tag text-coral border border-coral/40 px-2 py-1 rounded">
+              {t.onRequest}
+            </span>
+          )}
+        </div>
+
         <div className="relative aspect-[4/3] lg:aspect-[16/11]">
           <MotoVisual moto={s} priority={index < 2} driftDirection={isEven ? 'left' : 'right'} />
           {s.image && (
             <motion.div
-              className="absolute top-6 left-6 flex items-center gap-3 z-10"
+              className="hidden lg:flex absolute top-6 left-6 items-center gap-3 z-10"
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -53,7 +68,7 @@ export default function ScooterCard({
             </motion.div>
           )}
           {onRequest && (
-            <div className="absolute top-6 right-6 z-10 border border-ink/25 bg-coral/60 backdrop-blur-sm px-3 py-1.5">
+            <div className="hidden lg:block absolute top-6 right-6 z-10 border border-ink/25 bg-coral/60 backdrop-blur-sm px-3 py-1.5">
               <span className="tag text-terracotta">{t.onRequest}</span>
             </div>
           )}

@@ -1,14 +1,16 @@
 'use client'
 
 import Image from 'next/image'
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { motion, useScroll, useTransform, useReducedMotion } from 'motion/react'
 import type { Moto } from '@/lib/motos'
 
 /**
  * Affiche la photo si trouvée (avec multiply blend qui fait disparaître
  * le fond blanc/gris sur les sections coral), sinon un placeholder éditorial.
- * Ajoute un léger drift horizontal au scroll pour un effet cinématique.
+ *
+ * Drift horizontal scroll-linked → uniquement desktop (pointer:fine).
+ * Sur mobile, chaque moto avec son useScroll = coût GPU cumulatif énorme.
  */
 export default function MotoVisual({
   moto,
@@ -20,8 +22,17 @@ export default function MotoVisual({
   driftDirection?: 'left' | 'right'
 }) {
   const [failed, setFailed] = useState(false)
+  const [enableDrift, setEnableDrift] = useState(false)
   const ref = useRef<HTMLDivElement>(null)
   const reduce = useReducedMotion()
+
+  useEffect(() => {
+    // Drift scroll uniquement sur desktop avec vrai pointeur (souris/trackpad).
+    // Sur mobile/tactile, on skip → pas de useScroll observer, pas de transform continu.
+    if (typeof window === 'undefined') return
+    setEnableDrift(window.matchMedia('(hover: hover) and (pointer: fine)').matches)
+  }, [])
+
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ['start end', 'end start'],
@@ -34,18 +45,20 @@ export default function MotoVisual({
     return <PhotoPending moto={moto} />
   }
 
+  const applyDrift = enableDrift && !reduce
+
   return (
     <motion.div
       ref={ref}
       className="absolute inset-0"
-      style={reduce ? undefined : { x, scale }}
+      style={applyDrift ? { x, scale } : undefined}
     >
       <Image
         src={moto.image}
         alt={`${moto.name} — ${moto.subtitle}`}
         fill
         sizes="(max-width: 1024px) 100vw, 60vw"
-        className="object-contain transition-transform duration-[1200ms] ease-out hover:scale-[1.03] p-4 md:p-8"
+        className="object-contain p-4 md:p-8"
         priority={priority}
         onError={() => setFailed(true)}
       />
