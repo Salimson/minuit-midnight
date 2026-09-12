@@ -34,7 +34,7 @@ export const motos: Moto[] = [
     category: 'scooter',
     cc: 125,
     pricePerDay: 250,
-    image: '/motos/sym-jet-v2.png',
+    image: '/motos/sym-jet-v2.webp',
     features: ['Automatique', 'Coffre casque', 'Neuf 2026', 'Roues 14"'],
     description:
       "Le compagnon urbain de référence à Marrakech. Maniable dans les ruelles de la Médina, à l'aise sur les grands axes de Gueliz. Livraison possible à votre riad ou hôtel.",
@@ -52,7 +52,7 @@ export const motos: Moto[] = [
     category: 'scooter',
     cc: 150,
     pricePerDay: 300,
-    image: '/motos/sym-symphony-150-v3.png',
+    image: '/motos/sym-symphony-150-v3.webp',
     features: ['Automatique', 'ABS', 'Neuf 2026', 'Autonomie longue'],
     description:
       "Puissance et confort supérieurs. Idéal pour les trajets étendus vers l'Atlas, Essaouira ou la Palmeraie. Un cran au-dessus pour les motards confirmés.",
@@ -70,7 +70,7 @@ export const motos: Moto[] = [
     category: 'scooter',
     cc: 125,
     pricePerDay: 280,
-    image: '/motos/kymco-agility-125-v2.png',
+    image: '/motos/kymco-agility-125-v2.webp',
     features: ['Automatique', 'Injection', 'Neuf 2026', 'Frein disque avant'],
     description:
       "Le Kymco Agility joue la carte de la sobriété fiable. Consommation basse, entretien minimal, accès au permis B. Un choix rationnel pour la ville.",
@@ -88,7 +88,7 @@ export const motos: Moto[] = [
     category: 'scooter',
     cc: 150,
     pricePerDay: 320,
-    image: '/motos/kymco-people-s-150-v2.png',
+    image: '/motos/kymco-people-s-150-v2.webp',
     features: ['Grandes roues 16"', 'ABS', 'Neuf 2026', 'Selle 2 places'],
     description:
       "Grandes roues pour amortir les pavés de la Médina, silhouette élégante, moteur souple. Le Kymco haut de gamme au format compact.",
@@ -106,7 +106,7 @@ export const motos: Moto[] = [
     category: 'maxi-scooter',
     cc: 562,
     pricePerDay: 900,
-    image: '/motos/yamaha-tmax-560-v2.png',
+    image: '/motos/yamaha-tmax-560-v2.webp',
     features: ['48 ch', 'ABS', 'Traction control', 'Neuf 2026'],
     description:
       "La référence maxi-scooter. Sensations moto, confort scooter. Position sportive, freinage puissant. Idéal pour l'Ourika, Essaouira, Ouarzazate.",
@@ -124,7 +124,7 @@ export const motos: Moto[] = [
     category: 'maxi-scooter',
     cc: 292,
     pricePerDay: 800,
-    image: '/motos/yamaha-xmax-300-v2.png',
+    image: '/motos/yamaha-xmax-300-v2.webp',
     features: ['Automatique', 'ABS', 'Coffre XXL', 'Neuf 2026'],
     description:
       "L'équilibre parfait pour les trajets moyens. Autonomie confortable, deux coffres, pare-brise ajustable. Une machine adulte, sans excès.",
@@ -142,7 +142,7 @@ export const motos: Moto[] = [
     category: 'maxi-scooter',
     cc: 330,
     pricePerDay: 750,
-    image: '/motos/honda-forza-350-v3.png',
+    image: '/motos/honda-forza-350-v3.webp',
     features: ['Automatique', 'Coffre topcase', 'ABS', 'Neuf 2026'],
     description:
       "Le maxi-scooter premium Honda pour les longs trajets. Pare-brise ajustable, deux coffres, position confortable. Marrakech ↔ Essaouira sans effort.",
@@ -160,7 +160,7 @@ export const motos: Moto[] = [
     category: 'adventure',
     cc: 1300,
     pricePerDay: 1400,
-    image: '/motos/bmw-r1300gs-v2.png',
+    image: '/motos/bmw-r1300gs-v2.webp',
     features: ['Boxer 145 ch', 'ESA suspension', 'Mode Enduro', 'Neuf 2026'],
     description:
       "La référence trail 2026. Pour l'Atlas, Ouarzazate, la vallée des Roses. Confort route, capable en piste. Le vrai voyage aventure, quand la moto compte autant que la destination.",
