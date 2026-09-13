@@ -261,13 +261,13 @@ export const dict: Record<Locale, Dict> = {
     meta: {
       homeTitle: 'Location de motos et scooters à Marrakech | Minuit Midnight',
       homeDesc:
-        'Location de scooters et motos neufs à Marrakech depuis 2003. Agence Rue Oum Errabia, à cinq minutes de Gueliz. Assurance incluse. Réservez sur WhatsApp.',
-      fleetTitle: 'La Flotte — Scooters & Motos neufs à louer | Minuit Midnight',
+        'Location moto et scooter à Marrakech dès 250 MAD/jour. Flotte neuve 2026, assurance incluse, retrait agence Gueliz. Note 5/5, ouvert 9h-23h 7j/7.',
+      fleetTitle: 'Scooters & Motos neufs à louer Marrakech · Minuit Midnight',
       fleetDesc:
-        'Scooters, maxi-scooters et trails à louer à Marrakech. Millésime 2026 : SYM, Kymco, Yamaha, Honda, BMW. Tarifs nets, réservation directe.',
-      contactTitle: 'Contact — Location Moto Marrakech | Minuit Midnight',
+        'Scooters et motos neufs à louer à Marrakech dès 250 MAD/jour. Millésime 2026 : SYM, Kymco, Yamaha, Honda, BMW. Assurance, casque et km illimités inclus.',
+      contactTitle: 'Contact & Adresse Gueliz · Location Moto Marrakech',
       contactDesc:
-        'Contactez Minuit Midnight à Marrakech. Rue Oum Errabia · 09h–23h, 7/7. WhatsApp +212 6 73 14 26 72. Devis en moins de 24 h.',
+        'Location moto Marrakech à Rue Oum Errabia, 5 min de Gueliz. Ouvert 9h-23h, 7j/7. WhatsApp +212 6 73 14 26 72. Devis en 24 h, note 5/5 sur Google.',
     },
     nav: {
       home: 'Accueil',
@@ -525,13 +525,13 @@ export const dict: Record<Locale, Dict> = {
     meta: {
       homeTitle: 'Motorcycle & Scooter Rental in Marrakech | Minuit Midnight',
       homeDesc:
-        'Rent new scooters and motorcycles in Marrakech, since 2003. Agency on Rue Oum Errabia, five minutes from Gueliz. Insurance included. Book instantly on WhatsApp.',
-      fleetTitle: 'The Fleet — New Scooters & Motorcycles for Rent | Minuit Midnight',
+        'Motorcycle and scooter rental in Marrakech from 25 EUR/day. New 2026 fleet, insurance included, pick-up in Gueliz. 5-star rated, open 9am-11pm daily.',
+      fleetTitle: 'New Scooters & Motorcycles for Rent in Marrakech · Minuit Midnight',
       fleetDesc:
-        'Scooters, maxi-scooters and adventure bikes for rent in Marrakech. 2026 vintage: SYM, Kymco, Yamaha, Honda, BMW. Fair rates, direct booking.',
-      contactTitle: 'Contact — Marrakech Motorcycle Rental | Minuit Midnight',
+        'New scooters and motorcycles for rent in Marrakech from 25 EUR/day. 2026 line-up: SYM, Kymco, Yamaha, Honda, BMW. Insurance, helmet and unlimited mileage.',
+      contactTitle: 'Contact & Gueliz Address · Marrakech Motorcycle Rental',
       contactDesc:
-        'Reach Minuit Midnight in Marrakech. Rue Oum Errabia · 9am–11pm daily. WhatsApp +212 6 73 14 26 72. Quote within one business day.',
+        'Motorcycle rental Marrakech at Rue Oum Errabia, 5 min from Gueliz. Open 9am-11pm, 7 days. WhatsApp +212 6 73 14 26 72. Quote in 24h, 5-star on Google.',
     },
     nav: {
       home: 'Home',
@@ -789,13 +789,13 @@ export const dict: Record<Locale, Dict> = {
     meta: {
       homeTitle: 'تأجير دراجات نارية وسكوترات بمراكش | Minuit Midnight',
       homeDesc:
-        'تأجير سكوترات ودراجات نارية جديدة بمراكش منذ 2003. الوكالة بزنقة أم الربيع، على بعد خمس دقائق من كليز. التأمين مشمول. احجز عبر واتساب.',
-      fleetTitle: 'الأسطول — سكوترات ودراجات نارية جديدة | Minuit Midnight',
+        'تأجير سكوترات ودراجات نارية بمراكش من 250 درهم/يوم. أسطول جديد 2026، تأمين مشمول، الاستلام من كليز. تقييم 5/5، مفتوح من 9 إلى 23 يومياً.',
+      fleetTitle: 'سكوترات ودراجات نارية جديدة للإيجار بمراكش · Minuit Midnight',
       fleetDesc:
-        'سكوترات، ماكسي سكوترات ودراجات المغامرة للإيجار بمراكش. طراز 2026: سيم، كايمكو، ياماها، هوندا، بي إم دبليو.',
-      contactTitle: 'التواصل — تأجير الدراجات بمراكش | Minuit Midnight',
+        'سكوترات ودراجات نارية جديدة للإيجار بمراكش من 250 درهم/يوم. طراز 2026: سيم، كايمكو، ياماها، هوندا، بي إم دبليو. التأمين والخوذة والكيلومتراج مشمولة.',
+      contactTitle: 'التواصل والعنوان بكليز · تأجير الدراجات بمراكش',
       contactDesc:
-        'تواصل مع Minuit Midnight بمراكش. زنقة أم الربيع · من 9 صباحاً إلى 11 مساءً، 7 أيام/7. واتساب ‎+212 6 73 14 26 72.',
+        'تأجير دراجات بمراكش في زنقة أم الربيع، 5 دقائق من كليز. مفتوح من 9 إلى 23، 7 أيام/7. واتساب +212 6 73 14 26 72. عرض في 24 ساعة، تقييم 5/5 على Google.',
     },
     nav: {
       home: 'الرئيسية',

@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     template: '%s | Minuit Midnight',
   },
   description:
-    'Location de scooters et motos neufs à Marrakech depuis 2003. Agence Rue Oum Errabia, à cinq minutes de Gueliz. Réservez sur WhatsApp.',
+    'Location moto et scooter à Marrakech dès 250 MAD/jour. Flotte neuve 2026, assurance incluse, retrait agence Gueliz. Note 5/5, ouvert 9h-23h 7j/7.',
   applicationName: 'Minuit Midnight',
   authors: [{ name: 'Minuit Midnight' }],
   creator: 'Minuit Midnight',
