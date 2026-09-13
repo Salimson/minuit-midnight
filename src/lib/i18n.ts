@@ -304,12 +304,12 @@ export const dict: Record<Locale, Dict> = {
       ourAddress: '— Nous trouver',
     },
     hero: {
-      tag: 'Marrakech — Depuis 2003',
+      tag: 'Marrakech · Depuis 2003',
       lineA: "L'excellence",
       lineB1: 'du ',
       lineBEm: 'déplacement',
       lineC: 'urbain.',
-      lede: 'Minuit Midnight — location de scooters à Marrakech depuis plus de 20 ans. Une flotte neuve, un service haut de gamme, une connaissance intime de la ville.',
+      lede: 'Minuit Midnight. Location de scooters à Marrakech depuis plus de 20 ans. Une flotte neuve, un service haut de gamme, une connaissance intime de la ville.',
       ctaFleet: 'Voir la flotte',
       ctaContact: 'Nous contacter',
     },
@@ -323,7 +323,7 @@ export const dict: Record<Locale, Dict> = {
       yearsFrom: '— depuis 2003',
       p1a: 'Fondée en ',
       p1b: '2003',
-      p1c: ", Minuit Midnight est née d'une conviction : circuler à Marrakech n'est pas anodin. Les ruelles de la Médina, la fluidité de Gueliz, les hôtels d'Hivernage — chaque quartier a sa logique, ses raccourcis, ses pièges.",
+      p1c: ", Minuit Midnight est née d'une conviction : circuler à Marrakech n'est pas anodin. Les ruelles de la Médina, la fluidité de Gueliz, les hôtels d'Hivernage. Chaque quartier a sa logique, ses raccourcis, ses pièges.",
       p2a: 'Vingt ans plus tard, nous restons une ',
       p2Em: 'maison indépendante',
       p2b: ', choisie par les MRE de passage, les résidents exigeants, et les voyageurs qui refusent le hasard des marketplaces génériques.',
@@ -365,7 +365,7 @@ export const dict: Record<Locale, Dict> = {
       num: '04',
       titleA: 'Rendez-vous',
       titleEm: 'à Marrakech.',
-      lede: "Un scooter préparé, une clé en main, un accueil personnel. Nous ne prenons pas plus de dix nouveaux clients par jour — pour tenir le niveau.",
+      lede: "Un scooter préparé, une clé en main, un accueil personnel. Nous ne prenons pas plus de dix nouveaux clients par jour, pour tenir le niveau.",
       waLabel: 'WhatsApp direct',
       formLabel: 'Formulaire complet',
       orCall: 'Ou appelez :',
@@ -376,7 +376,7 @@ export const dict: Record<Locale, Dict> = {
       heroA: 'Que du neuf.',
       heroEm: 'Millésime 2026.',
       heroLede:
-        "Une gamme choisie, aucune machine de plus de deux ans. Scooters urbains dispos à l'agence — maxi-scooters, roadsters et cruisers sourcés sous 48h auprès de notre réseau local. SYM, Kymco, Yamaha, Honda, Kawasaki.",
+        "Une gamme choisie, aucune machine de plus de deux ans. Scooters urbains dispos à l'agence. Maxi-scooters, roadsters et cruisers sourcés sous 48h auprès de notre réseau local. SYM, Kymco, Yamaha, Honda, Kawasaki.",
       stat1: 'Modèles au catalogue',
       stat2: 'En agence',
       stat3Value: '48h',
@@ -396,7 +396,7 @@ export const dict: Record<Locale, Dict> = {
         { title: 'Casques neufs', detail: 'Fournis pour le conducteur et le passager.' },
         { title: 'Kilométrage illimité', detail: "Pas de plafond, roulez comme vous l'entendez." },
         { title: 'Assistance 7/7', detail: 'Ligne directe, intervention rapide dans Marrakech.' },
-        { title: "Retrait à l'agence", detail: 'Rue Oum Errabia — 5 min de Gueliz et Hivernage. Ouverte 9h-23h.' },
+        { title: "Retrait à l'agence", detail: 'Rue Oum Errabia. 5 min de Gueliz et Hivernage. Ouverte 9h à 23h.' },
         { title: 'Caution flexible', detail: 'Espèces ou carte, restituée intégralement à la remise.' },
         { title: 'Sourçage 48h', detail: 'T-Max, Shadow, Z900... via notre réseau local.' },
         { title: 'Machine préparée la veille', detail: 'Contrôle atelier avant chaque retrait.' },
@@ -408,7 +408,7 @@ export const dict: Record<Locale, Dict> = {
       heroA: 'Parlons.',
       heroEm: 'Simplement.',
       heroLede:
-        "Réservation, question technique, demande particulière — nous répondons personnellement, sous 24h ouvrées. Pour l'urgence, WhatsApp reste le plus rapide.",
+        "Réservation, question technique, demande particulière. Nous répondons personnellement sous 24h ouvrées. Pour l'urgence, WhatsApp reste le plus rapide.",
       aboutTag: 'La Maison',
       aboutNum: 'A —',
       aboutTitleA: 'Un service pensé pour les',
@@ -422,7 +422,7 @@ export const dict: Record<Locale, Dict> = {
       aboutP2b:
         ". Chaque réservation est traitée par un humain. Chaque scooter est préparé la veille. Chaque retrait respecte l'horaire à la minute.",
       aboutP3:
-        "Nous sommes une maison indépendante — pas une plateforme, pas un intermédiaire. C'est cette relation directe qui fait la différence sur vingt ans.",
+        "Nous sommes une maison indépendante. Pas une plateforme, pas un intermédiaire. C'est cette relation directe qui fait la différence sur vingt ans.",
       coordTag: 'Coordonnées',
       coordNum: 'B —',
       coordTitleA: 'Marrakech',
@@ -441,7 +441,7 @@ export const dict: Record<Locale, Dict> = {
       formNum: 'C —',
       formTitle: 'Écrivez-nous.',
       formLede:
-        'Décrivez votre besoin — modèle, dates, questions particulières. Nous confirmons sous 24h ouvrées avec une proposition ferme.',
+        'Décrivez votre besoin : modèle, dates, questions particulières. Nous confirmons sous 24h ouvrées avec une proposition ferme.',
       findUs: '— Nous trouver',
     },
     form: {
@@ -478,7 +478,7 @@ export const dict: Record<Locale, Dict> = {
       titleA: 'Estimez',
       titleEm: 'votre location.',
       lede:
-        'Choisissez votre modèle et votre durée. Prix net calculé en direct — sans surprise, sans engagement. Retrait à l\'agence Rue Oum Errabia.',
+        'Choisissez votre modèle et votre durée. Prix net calculé en direct. Sans surprise, sans engagement. Retrait à l\'agence Rue Oum Errabia.',
       fieldModel: 'Modèle',
       fieldDays: 'Durée',
       dayUnit: 'jour',
@@ -516,7 +516,7 @@ export const dict: Record<Locale, Dict> = {
       titleA: 'Vous nous avez',
       titleEm: 'déjà loué',
       lede:
-        'Deux minutes pour partager votre expérience — chaque avis compte, et nous répondons à tous.',
+        'Deux minutes pour partager votre expérience. Chaque avis compte, et nous répondons à tous.',
       cta: 'Laisser un avis Google',
       footerLink: 'Laisser un avis Google',
     },
@@ -568,12 +568,12 @@ export const dict: Record<Locale, Dict> = {
       ourAddress: '— Find us',
     },
     hero: {
-      tag: 'Marrakech — Since 2003',
+      tag: 'Marrakech · Since 2003',
       lineA: 'The finer way',
       lineB1: 'to ',
       lineBEm: 'move through',
       lineC: 'the city.',
-      lede: 'Minuit Midnight — scooter and motorcycle rental in Marrakech for over twenty years. A new fleet, a considered service, an intimate knowledge of the city.',
+      lede: 'Minuit Midnight. Scooter and motorcycle rental in Marrakech for over twenty years. A new fleet, a considered service, an intimate knowledge of the city.',
       ctaFleet: 'See the fleet',
       ctaContact: 'Get in touch',
     },
@@ -587,14 +587,14 @@ export const dict: Record<Locale, Dict> = {
       yearsFrom: '— since 2003',
       p1a: 'Founded in ',
       p1b: '2003',
-      p1c: ', Minuit Midnight was built on a simple belief: moving through Marrakech is never trivial. The lanes of the Medina, the flow of Gueliz, the hotels of Hivernage — every district has its own logic, its shortcuts, its pitfalls.',
+      p1c: ', Minuit Midnight was built on a simple belief: moving through Marrakech is never trivial. The lanes of the Medina, the flow of Gueliz, the hotels of Hivernage. Every district has its own logic, its shortcuts, its pitfalls.',
       p2a: 'Twenty years later, we remain an ',
       p2Em: 'independent house',
-      p2b: ' — chosen by Moroccans returning home, discerning residents, and travellers who refuse the roulette of generic marketplaces.',
+      p2b: ', chosen by Moroccans returning home, discerning residents, and travellers who refuse the roulette of generic marketplaces.',
       quote: '"A scooter that knows the city is worth ten cars that lose you in it."',
       p3a: 'Our fleet is fully ',
       p3b: 'renewed in 2024',
-      p3c: ' — new SYMs, workshop-maintained, pick-up at the agency five minutes from Gueliz. Insurance included. Support seven days a week.',
+      p3c: '. New SYMs, workshop-maintained, pick-up at the agency five minutes from Gueliz. Insurance included. Support seven days a week.',
     },
     pillars: {
       tag: 'The House',
@@ -608,7 +608,7 @@ export const dict: Record<Locale, Dict> = {
         },
         {
           title: 'Central agency.',
-          text: 'Rue Oum Errabia — five minutes from Gueliz and Hivernage. Fast pick-up, paperwork done in ten minutes.',
+          text: 'Rue Oum Errabia. Five minutes from Gueliz and Hivernage. Fast pick-up, paperwork done in ten minutes.',
         },
         {
           title: 'On call, always.',
@@ -629,7 +629,7 @@ export const dict: Record<Locale, Dict> = {
       num: '04',
       titleA: 'See you',
       titleEm: 'in Marrakech.',
-      lede: 'A prepared scooter, the key in hand, a personal welcome. We take no more than ten new clients a day — to hold the standard.',
+      lede: 'A prepared scooter, the key in hand, a personal welcome. We take no more than ten new clients a day, to hold the standard.',
       waLabel: 'WhatsApp us',
       formLabel: 'Full contact form',
       orCall: 'Or call:',
@@ -640,7 +640,7 @@ export const dict: Record<Locale, Dict> = {
       heroA: 'All new.',
       heroEm: '2026 vintage.',
       heroLede:
-        'A curated line-up, nothing more than two years old. City scooters ready at the agency — maxi-scooters, roadsters and cruisers sourced within 48 hours through our local network. SYM, Kymco, Yamaha, Honda, BMW.',
+        'A curated line-up, nothing more than two years old. City scooters ready at the agency. Maxi-scooters, roadsters and cruisers sourced within 48 hours through our local network. SYM, Kymco, Yamaha, Honda, BMW.',
       stat1: 'Catalogue models',
       stat2: 'At the agency',
       stat3Value: '48h',
@@ -660,7 +660,7 @@ export const dict: Record<Locale, Dict> = {
         { title: 'New helmets', detail: 'Provided for rider and passenger.' },
         { title: 'Unlimited mileage', detail: 'No cap. Ride as far as you like.' },
         { title: '7-day support', detail: 'A direct line, fast response anywhere in Marrakech.' },
-        { title: 'Pick-up at agency', detail: 'Rue Oum Errabia — 5 min from Gueliz and Hivernage. Open 9am-11pm.' },
+        { title: 'Pick-up at agency', detail: 'Rue Oum Errabia. 5 min from Gueliz and Hivernage. Open 9am to 11pm.' },
         { title: 'Flexible deposit', detail: 'Cash or card, fully refunded on return.' },
         { title: '48-hour sourcing', detail: 'T-Max, Shadow, Z900… through our local network.' },
         { title: 'Prepared the day before', detail: 'Workshop check before every pick-up.' },
@@ -672,7 +672,7 @@ export const dict: Record<Locale, Dict> = {
       heroA: "Let's talk.",
       heroEm: 'Simply.',
       heroLede:
-        'A booking, a technical question, a specific request — we answer personally, within one business day. For anything urgent, WhatsApp is fastest.',
+        'A booking, a technical question, a specific request. We answer personally, within one business day. For anything urgent, WhatsApp is fastest.',
       aboutTag: 'The House',
       aboutNum: 'A —',
       aboutTitleA: 'A service made for',
@@ -680,13 +680,13 @@ export const dict: Record<Locale, Dict> = {
       aboutTitleB: 'travellers.',
       aboutP1a: 'Since ',
       aboutP1b:
-        '2003, Minuit Midnight has served a clientele that refuses approximation — Moroccans returning home each year, resident executives, families settled in Gueliz, travellers who arrive by word of mouth.',
+        '2003, Minuit Midnight has served a clientele that refuses approximation: Moroccans returning home each year, resident executives, families settled in Gueliz, travellers who arrive by word of mouth.',
       aboutP2a: 'Our approach is ',
       aboutP2Em: 'personal',
       aboutP2b:
         '. Every booking is handled by a human. Every scooter is prepared the day before. Every pick-up is on time, to the minute.',
       aboutP3:
-        "We are an independent house — not a platform, not an intermediary. That direct relationship is what has made the difference for twenty years.",
+        "We are an independent house. Not a platform, not an intermediary. That direct relationship is what has made the difference for twenty years.",
       coordTag: 'Contact details',
       coordNum: 'B —',
       coordTitleA: 'Marrakech',
@@ -742,7 +742,7 @@ export const dict: Record<Locale, Dict> = {
       titleA: 'Estimate',
       titleEm: 'your rental.',
       lede:
-        'Pick your model and duration. Live price — no surprises, no commitment. Pick-up at our agency on Rue Oum Errabia.',
+        'Pick your model and duration. Live price. No surprises, no commitment. Pick-up at our agency on Rue Oum Errabia.',
       fieldModel: 'Model',
       fieldDays: 'Duration',
       dayUnit: 'day',
@@ -780,7 +780,7 @@ export const dict: Record<Locale, Dict> = {
       titleA: 'Have you',
       titleEm: 'ridden with us?',
       lede:
-        'Two minutes to share your experience — every review counts, and we read every one.',
+        'Two minutes to share your experience. Every review counts, and we read every one.',
       cta: 'Leave a Google review',
       footerLink: 'Leave a Google review',
     },
@@ -832,12 +832,12 @@ export const dict: Record<Locale, Dict> = {
       ourAddress: '— اعثر علينا',
     },
     hero: {
-      tag: 'مراكش — منذ 2003',
+      tag: 'مراكش · منذ 2003',
       lineA: 'أرقى أسلوبٍ',
       lineB1: 'للتنقّل ',
       lineBEm: 'في',
       lineC: 'المدينة.',
-      lede: 'Minuit Midnight — تأجير سكوترات بمراكش منذ أكثر من عشرين عاماً. أسطول جديد، خدمة رفيعة، ومعرفة حميمة بالمدينة.',
+      lede: 'Minuit Midnight. تأجير سكوترات بمراكش منذ أكثر من عشرين عاماً. أسطول جديد، خدمة رفيعة، ومعرفة حميمة بالمدينة.',
       ctaFleet: 'شاهد الأسطول',
       ctaContact: 'تواصل معنا',
     },
@@ -851,7 +851,7 @@ export const dict: Record<Locale, Dict> = {
       yearsFrom: '— منذ 2003',
       p1a: 'تأسّست عام ',
       p1b: '2003',
-      p1c: '، وقد وُلدت Minuit Midnight من قناعة راسخة: التنقّل في مراكش ليس أمراً هيّناً. أزقّة المدينة العتيقة، سلاسة كليز، وفنادق الهيفرناج — لكلّ حيٍّ منطقُه، اختصاراتُه، ومطبّاته.',
+      p1c: '، وقد وُلدت Minuit Midnight من قناعة راسخة: التنقّل في مراكش ليس أمراً هيّناً. أزقّة المدينة العتيقة، سلاسة كليز، وفنادق الهيفرناج. لكلّ حيٍّ منطقُه، اختصاراتُه، ومطبّاته.',
       p2a: 'بعد عشرين عاماً، ما زلنا ',
       p2Em: 'مؤسّسة مستقلّة',
       p2b: '، يختارها المغاربة المقيمون بالخارج في زياراتهم، والمقيمون الأذواق الرفيعة، والمسافرون الذين يرفضون عشوائيّة المنصّات العامّة.',
@@ -872,7 +872,7 @@ export const dict: Record<Locale, Dict> = {
         },
         {
           title: 'وكالة مركزيّة.',
-          text: 'زنقة أم الربيع — على بعد خمس دقائق من كليز والهيفرناج. استلام سريع، أوراق موقّعة في عشر دقائق.',
+          text: 'زنقة أم الربيع. على بعد خمس دقائق من كليز والهيفرناج. استلام سريع، أوراق موقّعة في عشر دقائق.',
         },
         {
           title: 'مساندة 7/7.',
@@ -893,7 +893,7 @@ export const dict: Record<Locale, Dict> = {
       num: '04',
       titleA: 'لقاؤنا',
       titleEm: 'بمراكش.',
-      lede: 'سكوتر مُجهَّز، مفتاحٌ في اليد، واستقبالٌ شخصيّ. لا نستقبل أكثر من عشرة زبائن جدد في اليوم — للحفاظ على مستوانا.',
+      lede: 'سكوتر مُجهَّز، مفتاحٌ في اليد، واستقبالٌ شخصيّ. لا نستقبل أكثر من عشرة زبائن جدد في اليوم، للحفاظ على مستوانا.',
       waLabel: 'واتساب مباشر',
       formLabel: 'استمارة كاملة',
       orCall: 'أو اتصل:',
@@ -904,7 +904,7 @@ export const dict: Record<Locale, Dict> = {
       heroA: 'جديد بالكامل.',
       heroEm: 'طراز 2026.',
       heroLede:
-        'تشكيلة منتقاة، لا آلة تتجاوز عامين. سكوترات المدينة متوفّرة بالوكالة — ماكسي سكوترات، رودسترز وكروزرز عبر شبكتنا المحلية خلال 48 ساعة. سيم، كايمكو، ياماها، هوندا، بي إم دبليو.',
+        'تشكيلة منتقاة، لا آلة تتجاوز عامين. سكوترات المدينة متوفّرة بالوكالة. ماكسي سكوترات، رودسترز وكروزرز عبر شبكتنا المحلية خلال 48 ساعة. سيم، كايمكو، ياماها، هوندا، بي إم دبليو.',
       stat1: 'موديل في الكاتالوغ',
       stat2: 'بالوكالة',
       stat3Value: '48س',
@@ -924,7 +924,7 @@ export const dict: Record<Locale, Dict> = {
         { title: 'خوذات جديدة', detail: 'مقدَّمة للسائق والراكب.' },
         { title: 'كيلومترات غير محدودة', detail: 'بلا سقف. اقطع المسافة التي تشاء.' },
         { title: 'مساندة 7 أيّام', detail: 'خطٌّ مباشر، تدخّل سريع في أرجاء مراكش.' },
-        { title: 'الاستلام من الوكالة', detail: 'زنقة أم الربيع — 5 دقائق من كليز والهيفرناج. مفتوحة من 9 إلى 23.' },
+        { title: 'الاستلام من الوكالة', detail: 'زنقة أم الربيع. 5 دقائق من كليز والهيفرناج. مفتوحة من 9 إلى 23.' },
         { title: 'ضمان مرن', detail: 'نقداً أو بالبطاقة، يُسترَدّ بالكامل عند الإرجاع.' },
         { title: 'توفير خلال 48 ساعة', detail: 'تي ماكس، شادو، Z900... عبر شبكتنا المحلّية.' },
         { title: 'الآلة مُجهَّزة اليوم السابق', detail: 'فحص في الورشة قبل كلّ استلام.' },
@@ -936,7 +936,7 @@ export const dict: Record<Locale, Dict> = {
       heroA: 'لِنتحدَّث.',
       heroEm: 'ببساطة.',
       heroLede:
-        'حجزٌ، سؤالٌ تقنيّ، طلبٌ خاصّ — نجيب شخصيّاً في أقلّ من 24 ساعة عمل. للحالات المستعجلة، واتساب هو الأسرع.',
+        'حجزٌ، سؤالٌ تقنيّ، طلبٌ خاصّ. نجيب شخصيّاً في أقلّ من 24 ساعة عمل. للحالات المستعجلة، واتساب هو الأسرع.',
       aboutTag: 'الدار',
       aboutNum: 'A —',
       aboutTitleA: 'خدمة مصمَّمة',
@@ -950,7 +950,7 @@ export const dict: Record<Locale, Dict> = {
       aboutP2b:
         '. كلّ حجز يعالجه إنسان. كلّ سكوتر يُجهَّز اليوم السابق. كلّ استلام يحترم الموعد إلى الدقيقة.',
       aboutP3:
-        'نحن مؤسّسة مستقلّة — لسنا منصّة، لسنا وسيطاً. هذه العلاقة المباشرة هي ما صنع الفارق منذ عشرين عاماً.',
+        'نحن مؤسّسة مستقلّة. لسنا منصّة، لسنا وسيطاً. هذه العلاقة المباشرة هي ما صنع الفارق منذ عشرين عاماً.',
       coordTag: 'معلومات التواصل',
       coordNum: 'B —',
       coordTitleA: 'مراكش',
@@ -969,7 +969,7 @@ export const dict: Record<Locale, Dict> = {
       formNum: 'C —',
       formTitle: 'اكتب لنا.',
       formLede:
-        'صِف حاجتك — الموديل، التواريخ، أيّ أسئلة خاصّة. نؤكّد في أقلّ من 24 ساعة عمل بعرض حازم.',
+        'صِف حاجتك : الموديل، التواريخ، أيّ أسئلة خاصّة. نؤكّد في أقلّ من 24 ساعة عمل بعرض حازم.',
       findUs: '— اعثر علينا',
     },
     form: {
@@ -1006,7 +1006,7 @@ export const dict: Record<Locale, Dict> = {
       titleA: 'قدّر',
       titleEm: 'إيجارك.',
       lede:
-        'اختر الموديل والمدّة. السعر مباشر — بلا مفاجآت، بلا التزام. الاستلام من الوكالة بزنقة أم الربيع.',
+        'اختر الموديل والمدّة. السعر مباشر. بلا مفاجآت، بلا التزام. الاستلام من الوكالة بزنقة أم الربيع.',
       fieldModel: 'الموديل',
       fieldDays: 'المدّة',
       dayUnit: 'يوم',
@@ -1044,7 +1044,7 @@ export const dict: Record<Locale, Dict> = {
       titleA: 'هل استأجرت',
       titleEm: 'منّا سابقاً؟',
       lede:
-        'دقيقتان لتشارك تجربتك — كلّ تقييم يهمّنا، ونجيب على الجميع.',
+        'دقيقتان لتشارك تجربتك. كلّ تقييم يهمّنا، ونجيب على الجميع.',
       cta: 'اترك تقييماً على Google',
       footerLink: 'اترك تقييماً على Google',
     },
