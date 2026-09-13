@@ -160,7 +160,7 @@ export default function ContactView({ locale }: { locale: Locale }) {
             </dl>
           </div>
 
-          <div className="relative min-h-[500px] lg:min-h-full border-t lg:border-t-0 lg:border-l border-black/10">
+          <div className="relative min-h-[500px] lg:min-h-full border-t lg:border-t-0 lg:border-l border-black/10 overflow-hidden">
             <iframe
               title="Minuit Midnight — Rue Oum Errebia, Gueliz, Marrakech"
               src={`https://www.google.com/maps?q=${CONTACT.mapsEmbedQuery}&hl=${locale}&z=15&output=embed`}
@@ -169,7 +169,19 @@ export default function ContactView({ locale }: { locale: Locale }) {
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               className="absolute inset-0 w-full h-full"
-              style={{ border: 0, filter: 'contrast(0.9) saturate(0.85) sepia(0.15)' }}
+              // Filtre "midnight map" — sepia unifie les tons, hue-rotate
+              // les envoie vers le bleu profond, saturate ravive la teinte.
+              style={{
+                border: 0,
+                filter:
+                  'sepia(1) hue-rotate(195deg) saturate(1.4) brightness(0.72) contrast(1.05)',
+              }}
+            />
+            {/* Voile midnight multiply — unifie la teinte + subtile respiration */}
+            <div
+              className="absolute inset-0 pointer-events-none mix-blend-multiply"
+              style={{ background: 'var(--midnight)', opacity: 0.18 }}
+              aria-hidden
             />
             {/* Encart adresse en bas-gauche — évite de couvrir le label
                 Google Maps de la fiche business (positionné en haut) */}
