@@ -19,7 +19,7 @@ export default function LocalBusinessJsonLd() {
     name: CONTACT.legalName,
     alternateName: CONTACT.brandName,
     description:
-      'Location de motos et scooters neufs à Marrakech depuis 2003. Livraison en riad ou à l’hôtel, assurance incluse, assistance 7/7.',
+      'Location de motos et scooters neufs à Marrakech depuis 2003. Agence Rue Oum Errabia, retrait direct, assurance incluse, assistance 7/7.',
     url: SITE.url,
     logo: `${SITE.url}/logo.png`,
     image: `${SITE.url}${SITE.ogImage}`,

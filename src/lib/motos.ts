@@ -37,7 +37,7 @@ export const motos: Moto[] = [
     image: '/motos/sym-jet-v2.webp',
     features: ['Automatique', 'Coffre casque', 'Neuf 2026', 'Roues 14"'],
     description:
-      "Le compagnon urbain de référence à Marrakech. Maniable dans les ruelles de la Médina, à l'aise sur les grands axes de Gueliz. Livraison possible à votre riad ou hôtel.",
+      "Le compagnon urbain de référence à Marrakech. Maniable dans les ruelles de la Médina, à l'aise sur les grands axes de Gueliz. Retrait direct à l'agence.",
     seats: 2,
     license: 'Permis A / B',
     availability: 'in-fleet',

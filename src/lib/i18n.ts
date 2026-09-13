@@ -220,22 +220,11 @@ type Dict = {
     lede: string
     fieldModel: string
     fieldDays: string
-    fieldZone: string
     dayUnit: string
     daysUnit: string
     totalLabel: string
     waCta: string
-    freeDelivery: string
-    paidDelivery: string // template avec {fee}
-    zones: {
-      agency: string
-      gueliz: string
-      hivernage: string
-      medina: string
-      palmeraie: string
-      other: string
-    }
-    waPrefill: string // template avec {model} {days} {zone} {price}
+    waPrefill: string // template avec {model} {days} {price}
   }
   reviews: {
     tag: string
@@ -272,7 +261,7 @@ export const dict: Record<Locale, Dict> = {
     meta: {
       homeTitle: 'Location de motos et scooters à Marrakech | Minuit Midnight',
       homeDesc:
-        'Location de scooters et motos neufs à Marrakech depuis 2003. Livraison au riad ou à l’hôtel. Assurance incluse. Réservez sur WhatsApp.',
+        'Location de scooters et motos neufs à Marrakech depuis 2003. Agence Rue Oum Errabia, à cinq minutes de Gueliz. Assurance incluse. Réservez sur WhatsApp.',
       fleetTitle: 'La Flotte — Scooters & Motos neufs à louer | Minuit Midnight',
       fleetDesc:
         'Scooters, maxi-scooters et trails à louer à Marrakech. Millésime 2026 : SYM, Kymco, Yamaha, Honda, BMW. Tarifs nets, réservation directe.',
@@ -341,7 +330,7 @@ export const dict: Record<Locale, Dict> = {
       quote: '« Un scooter qui connaît la ville vaut dix voitures qui vous y perdent. »',
       p3a: 'Notre flotte est intégralement ',
       p3b: 'renouvelée en 2024',
-      p3c: ' : SYM neufs, entretien atelier, livraison possible à votre riad ou hôtel. Assurance incluse. Assistance 7/7.',
+      p3c: ' : SYM neufs, entretien atelier, retrait à l\'agence à cinq minutes de Gueliz. Assurance incluse. Assistance 7/7.',
     },
     pillars: {
       tag: 'La Maison',
@@ -354,8 +343,8 @@ export const dict: Record<Locale, Dict> = {
           text: 'Renouvellement intégral en 2024. SYM automatiques, entretien atelier chaque semaine, casques neufs fournis.',
         },
         {
-          title: 'Livraison partout.',
-          text: "Riad dans la Médina, hôtel à Hivernage, résidence à Gueliz — nous venons à vous, à l'heure convenue.",
+          title: 'Agence centrale.',
+          text: "Rue Oum Errabia, à cinq minutes de Gueliz et de l'Hivernage. Retrait rapide, papiers signés en dix minutes.",
         },
         {
           title: 'Assistance 7/7.',
@@ -407,10 +396,10 @@ export const dict: Record<Locale, Dict> = {
         { title: 'Casques neufs', detail: 'Fournis pour le conducteur et le passager.' },
         { title: 'Kilométrage illimité', detail: "Pas de plafond, roulez comme vous l'entendez." },
         { title: 'Assistance 7/7', detail: 'Ligne directe, intervention rapide dans Marrakech.' },
-        { title: 'Livraison hôtel / riad', detail: 'Sur Gueliz, Hivernage, Médina — sur demande.' },
+        { title: "Retrait à l'agence", detail: 'Rue Oum Errabia — 5 min de Gueliz et Hivernage. Ouverte 9h-23h.' },
         { title: 'Caution flexible', detail: 'Espèces ou carte, restituée intégralement à la remise.' },
         { title: 'Sourçage 48h', detail: 'T-Max, Shadow, Z900... via notre réseau local.' },
-        { title: 'Machine préparée la veille', detail: 'Contrôle atelier avant chaque livraison.' },
+        { title: 'Machine préparée la veille', detail: 'Contrôle atelier avant chaque retrait.' },
       ],
     },
     contact: {
@@ -431,7 +420,7 @@ export const dict: Record<Locale, Dict> = {
       aboutP2a: 'Notre approche est ',
       aboutP2Em: 'personnelle',
       aboutP2b:
-        ". Chaque réservation est traitée par un humain. Chaque scooter est préparé la veille. Chaque livraison respecte l'horaire à cinq minutes près.",
+        ". Chaque réservation est traitée par un humain. Chaque scooter est préparé la veille. Chaque retrait respecte l'horaire à la minute.",
       aboutP3:
         "Nous sommes une maison indépendante — pas une plateforme, pas un intermédiaire. C'est cette relation directe qui fait la différence sur vingt ans.",
       coordTag: 'Coordonnées',
@@ -444,7 +433,7 @@ export const dict: Record<Locale, Dict> = {
       email: 'Email',
       hours: 'Horaires',
       hoursLine1: 'Lundi — Dimanche',
-      hoursLine2: '09h00 — 23h00 · Livraisons 7/7',
+      hoursLine2: '09h00 — 23h00 · 7 jours sur 7',
       whatsappOpen: 'Ouvrir la conversation →',
       instagram: 'Instagram',
       instagramOpen: 'Voir le profil →',
@@ -452,7 +441,7 @@ export const dict: Record<Locale, Dict> = {
       formNum: 'C —',
       formTitle: 'Écrivez-nous.',
       formLede:
-        'Décrivez votre besoin — modèle, dates, lieu de livraison. Nous confirmons sous 24h ouvrées avec une proposition ferme.',
+        'Décrivez votre besoin — modèle, dates, questions particulières. Nous confirmons sous 24h ouvrées avec une proposition ferme.',
       findUs: '— Nous trouver',
     },
     form: {
@@ -489,26 +478,15 @@ export const dict: Record<Locale, Dict> = {
       titleA: 'Estimez',
       titleEm: 'votre location.',
       lede:
-        'Choisissez votre modèle, votre durée, votre point de livraison. Prix net calculé en direct — sans surprise, sans engagement.',
+        'Choisissez votre modèle et votre durée. Prix net calculé en direct — sans surprise, sans engagement. Retrait à l\'agence Rue Oum Errabia.',
       fieldModel: 'Modèle',
       fieldDays: 'Durée',
-      fieldZone: 'Livraison',
       dayUnit: 'jour',
       daysUnit: 'jours',
       totalLabel: 'Total estimé',
       waCta: 'Réserver ce prix sur WhatsApp',
-      freeDelivery: 'Livraison incluse',
-      paidDelivery: 'Livraison +{fee} MAD',
-      zones: {
-        agency: "Retrait à l'agence",
-        gueliz: 'Livraison Gueliz',
-        hivernage: 'Livraison Hivernage',
-        medina: 'Livraison Médina',
-        palmeraie: 'Livraison Palmeraie',
-        other: 'Autre — à préciser',
-      },
       waPrefill:
-        'Bonjour, je souhaite réserver le {model} pour {days} — {zone}. Prix estimé : {price}. Pouvez-vous confirmer les disponibilités ?',
+        'Bonjour, je souhaite réserver le {model} pour {days}. Prix estimé : {price}. Pouvez-vous confirmer les disponibilités ?',
     },
     reviews: {
       tag: 'Avis clients',
@@ -526,7 +504,7 @@ export const dict: Record<Locale, Dict> = {
       titleEm: 'louez.',
       titleB: 'Vraiment.',
       lede:
-        "Pas de rendus. Pas de photos catalogue. Nos scooters, garés devant l'agence, préparés la veille de chaque livraison.",
+        "Pas de rendus. Pas de photos catalogue. Nos scooters, garés devant l'agence, préparés la veille de chaque location.",
       altText:
         "Scooters Minuit Midnight garés de nuit devant l'agence à Marrakech",
       altText2:
@@ -547,7 +525,7 @@ export const dict: Record<Locale, Dict> = {
     meta: {
       homeTitle: 'Motorcycle & Scooter Rental in Marrakech | Minuit Midnight',
       homeDesc:
-        'Rent new scooters and motorcycles in Marrakech, since 2003. Delivered to your riad or hotel. Insurance included. Book instantly on WhatsApp.',
+        'Rent new scooters and motorcycles in Marrakech, since 2003. Agency on Rue Oum Errabia, five minutes from Gueliz. Insurance included. Book instantly on WhatsApp.',
       fleetTitle: 'The Fleet — New Scooters & Motorcycles for Rent | Minuit Midnight',
       fleetDesc:
         'Scooters, maxi-scooters and adventure bikes for rent in Marrakech. 2026 vintage: SYM, Kymco, Yamaha, Honda, BMW. Fair rates, direct booking.',
@@ -616,7 +594,7 @@ export const dict: Record<Locale, Dict> = {
       quote: '"A scooter that knows the city is worth ten cars that lose you in it."',
       p3a: 'Our fleet is fully ',
       p3b: 'renewed in 2024',
-      p3c: ' — new SYMs, workshop-maintained, delivered to your riad or hotel. Insurance included. Support seven days a week.',
+      p3c: ' — new SYMs, workshop-maintained, pick-up at the agency five minutes from Gueliz. Insurance included. Support seven days a week.',
     },
     pillars: {
       tag: 'The House',
@@ -629,8 +607,8 @@ export const dict: Record<Locale, Dict> = {
           text: 'Fully renewed in 2024. Automatic SYMs, weekly workshop checks, new helmets provided for every ride.',
         },
         {
-          title: 'Delivered anywhere.',
-          text: 'A riad in the Medina, a hotel in Hivernage, a residence in Gueliz — we come to you, at the agreed hour.',
+          title: 'Central agency.',
+          text: 'Rue Oum Errabia — five minutes from Gueliz and Hivernage. Fast pick-up, paperwork done in ten minutes.',
         },
         {
           title: 'On call, always.',
@@ -682,10 +660,10 @@ export const dict: Record<Locale, Dict> = {
         { title: 'New helmets', detail: 'Provided for rider and passenger.' },
         { title: 'Unlimited mileage', detail: 'No cap. Ride as far as you like.' },
         { title: '7-day support', detail: 'A direct line, fast response anywhere in Marrakech.' },
-        { title: 'Hotel & riad delivery', detail: 'Gueliz, Hivernage, Medina — on request.' },
+        { title: 'Pick-up at agency', detail: 'Rue Oum Errabia — 5 min from Gueliz and Hivernage. Open 9am-11pm.' },
         { title: 'Flexible deposit', detail: 'Cash or card, fully refunded on return.' },
         { title: '48-hour sourcing', detail: 'T-Max, Shadow, Z900… through our local network.' },
-        { title: 'Prepared the day before', detail: 'Workshop check before every delivery.' },
+        { title: 'Prepared the day before', detail: 'Workshop check before every pick-up.' },
       ],
     },
     contact: {
@@ -706,7 +684,7 @@ export const dict: Record<Locale, Dict> = {
       aboutP2a: 'Our approach is ',
       aboutP2Em: 'personal',
       aboutP2b:
-        '. Every booking is handled by a human. Every scooter is prepared the day before. Every delivery is on time, to the minute.',
+        '. Every booking is handled by a human. Every scooter is prepared the day before. Every pick-up is on time, to the minute.',
       aboutP3:
         "We are an independent house — not a platform, not an intermediary. That direct relationship is what has made the difference for twenty years.",
       coordTag: 'Contact details',
@@ -719,7 +697,7 @@ export const dict: Record<Locale, Dict> = {
       email: 'Email',
       hours: 'Opening hours',
       hoursLine1: 'Monday — Sunday',
-      hoursLine2: '9am — 11pm · Delivery every day',
+      hoursLine2: '9am — 11pm · 7 days a week',
       whatsappOpen: 'Open the conversation →',
       instagram: 'Instagram',
       instagramOpen: 'View profile →',
@@ -727,7 +705,7 @@ export const dict: Record<Locale, Dict> = {
       formNum: 'C —',
       formTitle: 'Write to us.',
       formLede:
-        'Tell us the model, the dates, where you would like it delivered. We confirm within one business day with a firm offer.',
+        'Tell us the model, the dates, any specific questions. We confirm within one business day with a firm offer.',
       findUs: '— Find us',
     },
     form: {
@@ -764,26 +742,15 @@ export const dict: Record<Locale, Dict> = {
       titleA: 'Estimate',
       titleEm: 'your rental.',
       lede:
-        'Pick your model, your duration, your delivery spot. Live price — no surprises, no commitment.',
+        'Pick your model and duration. Live price — no surprises, no commitment. Pick-up at our agency on Rue Oum Errabia.',
       fieldModel: 'Model',
       fieldDays: 'Duration',
-      fieldZone: 'Delivery',
       dayUnit: 'day',
       daysUnit: 'days',
       totalLabel: 'Estimated total',
       waCta: 'Book this price on WhatsApp',
-      freeDelivery: 'Delivery included',
-      paidDelivery: 'Delivery +{fee} MAD',
-      zones: {
-        agency: 'Pick-up at agency',
-        gueliz: 'Delivery to Gueliz',
-        hivernage: 'Delivery to Hivernage',
-        medina: 'Delivery to Medina',
-        palmeraie: 'Delivery to Palmeraie',
-        other: 'Elsewhere — to discuss',
-      },
       waPrefill:
-        'Hello, I would like to book the {model} for {days} — {zone}. Estimated price: {price}. Could you confirm availability?',
+        'Hello, I would like to book the {model} for {days}. Estimated price: {price}. Could you confirm availability?',
     },
     reviews: {
       tag: 'Client reviews',
@@ -801,7 +768,7 @@ export const dict: Record<Locale, Dict> = {
       titleEm: 'actually',
       titleB: 'rent.',
       lede:
-        'No renders. No stock photos. Our scooters, parked outside the agency, prepped the day before every delivery.',
+        'No renders. No stock photos. Our scooters, parked outside the agency, prepped the day before every rental.',
       altText:
         'Minuit Midnight scooters parked at night outside the Marrakech agency',
       altText2:
@@ -822,7 +789,7 @@ export const dict: Record<Locale, Dict> = {
     meta: {
       homeTitle: 'تأجير دراجات نارية وسكوترات بمراكش | Minuit Midnight',
       homeDesc:
-        'تأجير سكوترات ودراجات نارية جديدة بمراكش منذ 2003. توصيل إلى الرياض أو الفندق. التأمين مشمول. احجز عبر واتساب.',
+        'تأجير سكوترات ودراجات نارية جديدة بمراكش منذ 2003. الوكالة بزنقة أم الربيع، على بعد خمس دقائق من كليز. التأمين مشمول. احجز عبر واتساب.',
       fleetTitle: 'الأسطول — سكوترات ودراجات نارية جديدة | Minuit Midnight',
       fleetDesc:
         'سكوترات، ماكسي سكوترات ودراجات المغامرة للإيجار بمراكش. طراز 2026: سيم، كايمكو، ياماها، هوندا، بي إم دبليو.',
@@ -891,7 +858,7 @@ export const dict: Record<Locale, Dict> = {
       quote: '«سكوتر يعرف المدينة يعادل عشر سيّاراتٍ تُتيهك فيها.»',
       p3a: 'أسطولنا ',
       p3b: 'مُجدَّد بالكامل عام 2024',
-      p3c: ': سيم جديدة، صيانة في الورشة، توصيل ممكن إلى رياضك أو فندقك. التأمين مشمول. مساندة سبعة أيّام في الأسبوع.',
+      p3c: ': سيم جديدة، صيانة في الورشة، استلام من الوكالة على بعد خمس دقائق من كليز. التأمين مشمول. مساندة سبعة أيّام في الأسبوع.',
     },
     pillars: {
       tag: 'الدار',
@@ -904,8 +871,8 @@ export const dict: Record<Locale, Dict> = {
           text: 'تجديد شامل عام 2024. سيم أوتوماتيكيّة، فحص أسبوعيّ في الورشة، وخوذات جديدة مع كلّ رحلة.',
         },
         {
-          title: 'توصيل في كلّ مكان.',
-          text: 'رياضٌ في المدينة العتيقة، فندقٌ في الهيفرناج، إقامةٌ في كليز — نأتي إليك في الوقت المتّفق عليه.',
+          title: 'وكالة مركزيّة.',
+          text: 'زنقة أم الربيع — على بعد خمس دقائق من كليز والهيفرناج. استلام سريع، أوراق موقّعة في عشر دقائق.',
         },
         {
           title: 'مساندة 7/7.',
@@ -957,10 +924,10 @@ export const dict: Record<Locale, Dict> = {
         { title: 'خوذات جديدة', detail: 'مقدَّمة للسائق والراكب.' },
         { title: 'كيلومترات غير محدودة', detail: 'بلا سقف. اقطع المسافة التي تشاء.' },
         { title: 'مساندة 7 أيّام', detail: 'خطٌّ مباشر، تدخّل سريع في أرجاء مراكش.' },
-        { title: 'توصيل للفنادق والرياض', detail: 'كليز، الهيفرناج، المدينة العتيقة — حسب الطلب.' },
+        { title: 'الاستلام من الوكالة', detail: 'زنقة أم الربيع — 5 دقائق من كليز والهيفرناج. مفتوحة من 9 إلى 23.' },
         { title: 'ضمان مرن', detail: 'نقداً أو بالبطاقة، يُسترَدّ بالكامل عند الإرجاع.' },
         { title: 'توفير خلال 48 ساعة', detail: 'تي ماكس، شادو، Z900... عبر شبكتنا المحلّية.' },
-        { title: 'الآلة مُجهَّزة اليوم السابق', detail: 'فحص في الورشة قبل كلّ توصيل.' },
+        { title: 'الآلة مُجهَّزة اليوم السابق', detail: 'فحص في الورشة قبل كلّ استلام.' },
       ],
     },
     contact: {
@@ -981,7 +948,7 @@ export const dict: Record<Locale, Dict> = {
       aboutP2a: 'منهجنا ',
       aboutP2Em: 'شخصيّ',
       aboutP2b:
-        '. كلّ حجز يعالجه إنسان. كلّ سكوتر يُجهَّز اليوم السابق. كلّ توصيل يحترم الموعد إلى الدقيقة.',
+        '. كلّ حجز يعالجه إنسان. كلّ سكوتر يُجهَّز اليوم السابق. كلّ استلام يحترم الموعد إلى الدقيقة.',
       aboutP3:
         'نحن مؤسّسة مستقلّة — لسنا منصّة، لسنا وسيطاً. هذه العلاقة المباشرة هي ما صنع الفارق منذ عشرين عاماً.',
       coordTag: 'معلومات التواصل',
@@ -994,7 +961,7 @@ export const dict: Record<Locale, Dict> = {
       email: 'البريد الإلكتروني',
       hours: 'أوقات العمل',
       hoursLine1: 'الإثنين — الأحد',
-      hoursLine2: 'من 09:00 إلى 23:00 · توصيل 7 أيّام',
+      hoursLine2: 'من 09:00 إلى 23:00 · سبعة أيّام في الأسبوع',
       whatsappOpen: 'افتح المحادثة ←',
       instagram: 'إنستغرام',
       instagramOpen: 'افتح البروفايل ←',
@@ -1002,7 +969,7 @@ export const dict: Record<Locale, Dict> = {
       formNum: 'C —',
       formTitle: 'اكتب لنا.',
       formLede:
-        'صِف حاجتك — الموديل، التواريخ، مكان التوصيل. نؤكّد في أقلّ من 24 ساعة عمل بعرض حازم.',
+        'صِف حاجتك — الموديل، التواريخ، أيّ أسئلة خاصّة. نؤكّد في أقلّ من 24 ساعة عمل بعرض حازم.',
       findUs: '— اعثر علينا',
     },
     form: {
@@ -1039,26 +1006,15 @@ export const dict: Record<Locale, Dict> = {
       titleA: 'قدّر',
       titleEm: 'إيجارك.',
       lede:
-        'اختر الموديل، المدّة، ومكان التوصيل. السعر مباشر — بلا مفاجآت، بلا التزام.',
+        'اختر الموديل والمدّة. السعر مباشر — بلا مفاجآت، بلا التزام. الاستلام من الوكالة بزنقة أم الربيع.',
       fieldModel: 'الموديل',
       fieldDays: 'المدّة',
-      fieldZone: 'التوصيل',
       dayUnit: 'يوم',
       daysUnit: 'أيّام',
       totalLabel: 'المجموع المقدَّر',
       waCta: 'احجز هذا السعر عبر واتساب',
-      freeDelivery: 'التوصيل مشمول',
-      paidDelivery: 'التوصيل +{fee} درهم',
-      zones: {
-        agency: 'الاستلام من الوكالة',
-        gueliz: 'توصيل إلى كليز',
-        hivernage: 'توصيل إلى الهيفرناج',
-        medina: 'توصيل إلى المدينة العتيقة',
-        palmeraie: 'توصيل إلى النخيل',
-        other: 'مكان آخر — يُحدَّد',
-      },
       waPrefill:
-        'السلام عليكم، أودّ حجز {model} لمدّة {days} — {zone}. السعر المقدَّر: {price}. هل يمكنكم تأكيد التوفّر؟',
+        'السلام عليكم، أودّ حجز {model} لمدّة {days}. السعر المقدَّر: {price}. هل يمكنكم تأكيد التوفّر؟',
     },
     reviews: {
       tag: 'آراء الزبائن',
@@ -1076,7 +1032,7 @@ export const dict: Record<Locale, Dict> = {
       titleEm: 'تستأجره',
       titleB: 'حقّاً.',
       lede:
-        'لا صور تركيبيّة. لا صور كاتالوغ. سكوتراتنا، متوقّفة أمام الوكالة، مُجهَّزة في اليوم السابق لكلّ توصيل.',
+        'لا صور تركيبيّة. لا صور كاتالوغ. سكوتراتنا، متوقّفة أمام الوكالة، مُجهَّزة في اليوم السابق لكلّ إيجار.',
       altText:
         'سكوترات Minuit Midnight متوقّفة ليلاً أمام الوكالة في مراكش',
       altText2:

@@ -7,42 +7,28 @@ import { convertToCurrency, currencySymbol } from '@/lib/pricing'
 import { whatsappLink } from '@/lib/config'
 import { dict, type Locale } from '@/lib/i18n'
 
-type ZoneId = 'agency' | 'gueliz' | 'hivernage' | 'medina' | 'palmeraie' | 'other'
-
-const ZONE_ORDER: ZoneId[] = ['agency', 'gueliz', 'hivernage', 'medina', 'palmeraie', 'other']
-
-// Frais de livraison en MAD. La Palmeraie est plus loin — surcoût réaliste.
-// 'other' laisse à 0 dans le calcul, mais le WA prefill le signale à l'agence.
-const ZONE_FEES: Record<ZoneId, number> = {
-  agency: 0,
-  gueliz: 0,
-  hivernage: 0,
-  medina: 0,
-  palmeraie: 50,
-  other: 0,
-}
-
+/**
+ * Configurateur simplifié : modèle × durée → prix live + WhatsApp pré-rempli.
+ * Le retrait se fait exclusivement à l'agence (pas de livraison), donc pas
+ * de champ zone.
+ */
 export default function PricingConfigurator({ locale }: { locale: Locale }) {
   const t = dict[locale].configurator
   const [motoId, setMotoId] = useState<string>(motos[0].id)
   const [days, setDays] = useState<number>(1)
-  const [zoneId, setZoneId] = useState<ZoneId>('agency')
 
   const moto = motos.find((m) => m.id === motoId) ?? motos[0]
-  const deliveryFee = ZONE_FEES[zoneId]
-  const totalMad = moto.pricePerDay * days + deliveryFee
+  const totalMad = moto.pricePerDay * days
 
   const { currency, rates } = useCurrency()
   const total = convertToCurrency(totalMad, currency, rates)
   const symbol = currencySymbol(currency)
 
   const daysText = days === 1 ? t.dayUnit : t.daysUnit
-  const zoneText = t.zones[zoneId]
 
   const waMsg = t.waPrefill
     .replace('{model}', moto.name)
     .replace('{days}', `${days} ${daysText}`)
-    .replace('{zone}', zoneText)
     .replace('{price}', `${total} ${symbol}`)
 
   return (
@@ -64,7 +50,7 @@ export default function PricingConfigurator({ locale }: { locale: Locale }) {
 
         {/* Panneau configurateur */}
         <div className="border border-ink/10 bg-cream/40 backdrop-blur-sm p-6 md:p-10">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
             {/* Modèle */}
             <label className="block">
               <span className="tag text-ink/60 block mb-3">{t.fieldModel}</span>
@@ -115,23 +101,6 @@ export default function PricingConfigurator({ locale }: { locale: Locale }) {
               </div>
               <span className="tag text-ink/50 mt-2 block">{daysText}</span>
             </label>
-
-            {/* Zone de livraison */}
-            <label className="block">
-              <span className="tag text-ink/60 block mb-3">{t.fieldZone}</span>
-              <select
-                value={zoneId}
-                onChange={(e) => setZoneId(e.target.value as ZoneId)}
-                className="w-full bg-transparent border-b border-ink/25 focus:border-terracotta py-3 font-mono text-lg text-ink outline-none transition-colors"
-              >
-                {ZONE_ORDER.map((z) => (
-                  <option key={z} value={z}>
-                    {t.zones[z]}
-                    {ZONE_FEES[z] > 0 ? ` (+${ZONE_FEES[z]} MAD)` : ''}
-                  </option>
-                ))}
-              </select>
-            </label>
           </div>
 
           {/* Total + CTA */}
@@ -144,17 +113,8 @@ export default function PricingConfigurator({ locale }: { locale: Locale }) {
                 </span>
                 <span className="font-mono text-xl text-ink/70">{symbol}</span>
               </div>
-              <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm">
-                <span className="text-ink/60">
-                  {moto.pricePerDay} MAD × {days} {daysText}
-                </span>
-                {deliveryFee > 0 ? (
-                  <span className="tag text-terracotta">
-                    {t.paidDelivery.replace('{fee}', String(deliveryFee))}
-                  </span>
-                ) : zoneId !== 'agency' ? (
-                  <span className="tag text-terracotta">{t.freeDelivery}</span>
-                ) : null}
+              <div className="mt-3 text-sm text-ink/60">
+                {moto.pricePerDay} MAD × {days} {daysText}
               </div>
             </div>
 

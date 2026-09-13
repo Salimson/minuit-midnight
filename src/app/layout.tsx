@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     template: '%s | Minuit Midnight',
   },
   description:
-    'Location de scooters et motos neufs à Marrakech depuis 2003. Livraison au riad ou à l’hôtel. Réservez sur WhatsApp.',
+    'Location de scooters et motos neufs à Marrakech depuis 2003. Agence Rue Oum Errabia, à cinq minutes de Gueliz. Réservez sur WhatsApp.',
   applicationName: 'Minuit Midnight',
   authors: [{ name: 'Minuit Midnight' }],
   creator: 'Minuit Midnight',
