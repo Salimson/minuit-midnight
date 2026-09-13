@@ -257,6 +257,14 @@ type Dict = {
     altText2: string
     cta: string
   }
+  leaveReview: {
+    tag: string
+    titleA: string
+    titleEm: string
+    lede: string
+    cta: string
+    footerLink: string
+  }
 }
 
 export const dict: Record<Locale, Dict> = {
@@ -525,6 +533,15 @@ export const dict: Record<Locale, Dict> = {
         "Scooters Minuit Midnight vue face avec sacoches Moto Rent et numéros de contact, sous les néons de Marrakech",
       cta: 'Voir toute la flotte',
     },
+    leaveReview: {
+      tag: '— Merci',
+      titleA: 'Vous nous avez',
+      titleEm: 'déjà loué',
+      lede:
+        'Deux minutes pour partager votre expérience — chaque avis compte, et nous répondons à tous.',
+      cta: 'Laisser un avis Google',
+      footerLink: 'Laisser un avis Google',
+    },
   },
   en: {
     meta: {
@@ -791,6 +808,15 @@ export const dict: Record<Locale, Dict> = {
         'Minuit Midnight scooters front view with Moto Rent branding and phone numbers, under the neon lights of Marrakech',
       cta: 'See the full fleet',
     },
+    leaveReview: {
+      tag: '— Thank you',
+      titleA: 'Have you',
+      titleEm: 'ridden with us?',
+      lede:
+        'Two minutes to share your experience — every review counts, and we read every one.',
+      cta: 'Leave a Google review',
+      footerLink: 'Leave a Google review',
+    },
   },
   ar: {
     meta: {
@@ -1056,6 +1082,15 @@ export const dict: Record<Locale, Dict> = {
       altText2:
         'سكوترات Minuit Midnight من الأمام مع سلات Moto Rent وأرقام الهاتف، تحت أضواء النيون في مراكش',
       cta: 'شاهد الأسطول كاملاً',
+    },
+    leaveReview: {
+      tag: '— شكراً',
+      titleA: 'هل استأجرت',
+      titleEm: 'منّا سابقاً؟',
+      lede:
+        'دقيقتان لتشارك تجربتك — كلّ تقييم يهمّنا، ونجيب على الجميع.',
+      cta: 'اترك تقييماً على Google',
+      footerLink: 'اترك تقييماً على Google',
     },
   },
 }

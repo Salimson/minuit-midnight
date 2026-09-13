@@ -44,6 +44,11 @@ export const CONTACT = {
   // Google Place ID — public, non-secret. Sert à la route /api/reviews et
   // au JSON-LD LocalBusiness comme identifier.google_place_id.
   googlePlaceId: 'ChIJRVv1e63vrw0RThjuOzLMcoI',
+
+  // Lien direct pour laisser un avis Google (pré-ouvre le formulaire d'avis
+  // sur la fiche — un seul clic pour l'utilisateur).
+  googleReviewLink:
+    'https://search.google.com/local/writereview?placeid=ChIJRVv1e63vrw0RThjuOzLMcoI',
 }
 
 export const SITE = {

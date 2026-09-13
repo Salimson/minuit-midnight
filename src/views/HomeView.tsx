@@ -10,6 +10,7 @@ import dynamic from 'next/dynamic'
 import PriceTag from '@/components/PriceTag'
 import HeroNightVeil from '@/components/HeroNightVeil'
 import RealFleetShowcase from '@/components/RealFleetShowcase'
+import LeaveReviewCta from '@/components/LeaveReviewCta'
 import { dict, pathFor, type Locale } from '@/lib/i18n'
 
 // Below-fold — hydratation différée, TTI plus rapide sur mobile
@@ -256,6 +257,9 @@ export default function HomeView({ locale }: { locale: Locale }) {
 
       {/* AVIS — social proof entre pilliers et flotte */}
       <GoogleReviews locale={locale} />
+
+      {/* Sollicitation avis — juste après les avis existants */}
+      <LeaveReviewCta locale={locale} />
 
       {/* FLOTTE PREVIEW */}
       <section className="section-warm relative py-24 md:py-32">
