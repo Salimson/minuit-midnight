@@ -57,10 +57,9 @@ export const metadata: Metadata = {
   creator: 'Minuit Midnight',
   publisher: 'Minuit Midnight',
   formatDetection: { telephone: true, address: true, email: true },
-  icons: {
-    icon: '/logo.png',
-    apple: '/logo.png',
-  },
+  // Favicons : Next.js détecte auto src/app/icon.png + apple-icon.png,
+  // pas besoin de config manuelle. Le logo original public/logo.png reste
+  // dispo pour Nav / Footer.
   // Google Search Console — validation propriété
   verification: {
     google: 'm2JlsYbgFagY8ZqSxm71TSzt3_HNhJ_kR0cJf-tK6-A',
