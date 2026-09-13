@@ -171,7 +171,9 @@ export default function ContactView({ locale }: { locale: Locale }) {
               className="absolute inset-0 w-full h-full"
               style={{ border: 0, filter: 'contrast(0.9) saturate(0.85) sepia(0.15)' }}
             />
-            <div className="absolute top-6 left-6 z-10 bg-ink/95 backdrop-blur-md px-5 py-4 border border-cream/10">
+            {/* Encart adresse en bas-gauche — évite de couvrir le label
+                Google Maps de la fiche business (positionné en haut) */}
+            <div className="absolute bottom-6 left-6 right-6 md:right-auto md:max-w-sm z-10 bg-ink/95 backdrop-blur-md px-5 py-4 border border-cream/10">
               <div className="tag text-coral mb-1">{t.contact.findUs}</div>
               <div className="text-cream text-sm">{CONTACT.address}</div>
             </div>
